@@ -3,5 +3,15 @@
 {% block title 'Find all the best pinson earth' %}
 
 {% block body %}
-    <h1>All pins</h1>
+    {% if pins|length > 0 %}
+        <h1>{{ pluralize(pins|length, 'Pin', 'Pins') }}</h1>
+        {% for pin in pins %}
+            <article>
+                <h2>{{ pin.title }}</h2>
+                <p>{{ pin.description }}</p>
+            </article>
+        {% endfor %}
+    {% else %}
+        <p>Aucun pin</p>
+    {% endif %}
 {% endblock %}
