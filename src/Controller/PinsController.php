@@ -30,7 +30,7 @@ class PinsController extends AbstractController
      */
     public function create(Request $req, EntityManagerInterface $em): Response {
         $pin = new Pin();
-        $form = $this->createForm(PinType::class);
+        $form = $this->createForm(PinType::class, $pin);
         $form->handleRequest($req);
         if ($form->isSubmitted() && $form->isValid()) {
             $em->persist($pin);
@@ -72,11 +72,14 @@ class PinsController extends AbstractController
     /**
      * @Route("/pins/{id<[0-9]+>}/delete", name="app_pins_delete", methods={"DELETE"})
      */
-    public function delete(Pin $pin, EntityManagerInterface $em): Response {
+    public function delete(Request $req, Pin $pin, EntityManagerInterface $em): Response {
 
-        $em->remove($pin);
-        $em->flush();
+        if ($this->isCsrfTokenValid('pin-deletion_'.$pin->getId(), $req->request->get('csrf_token'))) {
+            $em->remove($pin);
+            $em->flush();
+        }
         return $this->redirectToRoute('app_home');
+
     }
 
 }
