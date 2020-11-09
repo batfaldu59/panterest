@@ -22,8 +22,7 @@
     <list default="true" id="4652eb05-69d0-4d12-a48c-81c79f05ab15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PinsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PinsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Pin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pins/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pins/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +164,7 @@
       <updated>1604839128309</updated>
       <workItem from="1604839129409" duration="1916000" />
       <workItem from="1604909250742" duration="2662000" />
-      <workItem from="1604917592048" duration="18948000" />
+      <workItem from="1604917592048" duration="21001000" />
     </task>
     <servers />
   </component>
