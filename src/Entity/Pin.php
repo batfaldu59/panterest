@@ -23,7 +23,7 @@ class Pin
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Title can't blank")
+     * @Assert\NotBlank
      * @Assert\Length(min=3)
      */
     private $title;
