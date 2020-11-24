@@ -55,7 +55,6 @@ Encore
 
     // enables Sass/SCSS support
     .enableSassLoader()
-
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
 
@@ -69,6 +68,11 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/admin.js')
+    .copyFiles({
+        from: './assets/image',
+        to: '[path][name].[hash:8].[ext]',
+        context: './assets'
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();
