@@ -1,0 +1,14 @@
+
+{% extends 'layouts/base.html.twig' %}
+
+{% block title 'Mon compte' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h2 class="text-center mb-3">Mon compte</h2>
+            <p>Bienvenue {{ app.user.firstname }}</p>
+            <a href="{{ path('app_modif') }}">Modifier vos informations</a>
+        </div>
+    </div>
+{% endblock %}
